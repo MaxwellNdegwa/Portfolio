@@ -146,7 +146,7 @@ span {
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 2rem var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
     color: var(--bg-color);
     letter-spacing: .1rem;
@@ -412,9 +412,9 @@ span {
 }
 
 @media (max-width: 768px) {
-    #menu-icon {
+    /* #menu-icon {
         display: block; 
-    }
+    } */
 
     .navbar {
         position: absolute;
@@ -484,6 +484,9 @@ span {
 }
 
 @media (max-width: 450px) {
+    #menu-icon {
+        display: flex; 
+    }
     html {
         font-size: 50%;
     }
