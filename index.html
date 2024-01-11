@@ -163,20 +163,32 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me !</span></h2>
-
+      
         <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Mobile Number">
+            <input type="text" placeholder="Email Subject">
+          </div>
+          <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <input type="submit" value="Send Message" class="btn" onclick="sendEmail()">
         </form>
-    </section>
+      </section>
+      
+      <script>
+        function sendEmail() {
+          const name = document.querySelector('input[placeholder="Full Name"]').value;
+          const email = document.querySelector('input[placeholder="Email Address"]').value;
+          const subject = document.querySelector('input[placeholder="Email Subject"]').value;
+          const message = document.getElementById('message').value;
+      
+          const mailtoLink = `mailto:maxwellndegwa07@gmail.com?subject=${subject}&body=Name: ${name}%0AEmail: ${email}%0A%0AMessage: ${message}`;
+          window.location.href = mailtoLink;
+        }
+      </script>
 
     <!-- footer design -->
 
